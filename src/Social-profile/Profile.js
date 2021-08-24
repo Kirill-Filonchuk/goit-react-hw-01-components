@@ -1,64 +1,45 @@
-// import TitleMy from './Title'
+import PropTypes from 'prop-types';
+import s from '../Social-profile/SocialProfile.module.css';
+import DefImg from '../Social-profile/5345363.png';
 
 function Profile({ name, tag, location, avatar, stats }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt={name} className="avatar" />
-        <p className="name">{name}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt={name} className={s.avatar} />
+        <p className={s.name}>{name}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         <li>
-          <span className="label">{Object.keys(stats)[0]}: </span>
-          <span className="quantity">{Object.values(stats)[0]}</span>
+          <span className={s.label}>Followers</span>
+          <span className={s.quantity}>{stats['followers']}</span>
         </li>
         <li>
-          <span className="label">{Object.keys(stats)[1]}: </span>
-          <span className="quantity">{Object.values(stats)[1]}</span>
+          <span className={s.label}>Views</span>
+          <span className={s.quantity}>{stats['views']}</span>
         </li>
         <li>
-          <span className="label">{Object.keys(stats)[2]}: </span>
-          <span className="quantity">{Object.values(stats)[2]}</span>
+          <span className={s.label}>Likes</span>
+          <span className={s.quantity}>{stats['likes']}</span>
         </li>
       </ul>
     </div>
   );
 }
 
+Profile.defaultProps = {
+  avatar: DefImg,
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stars: PropTypes.object,
+};
+
 export default Profile;
-
-// import TitleMy from './Title'
-
-// function Title(props) {
-//     return (
-//         <div>
-//             <TitleMy title={props.title}/>
-//             <p>{props.content}</p>
-//             <h2>{props.title}</h2>
-//             <ul>
-//                 {props.shops.map(shop => (
-//                     <li key={shop.id}>{shop.value}</li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// }
-
-// or
-
-// function Title({ content = 'default title', title, shops }) {
-//     return (
-//         <div>
-//         <p>{content}</p>
-//             <p>{title}</p>
-//             <ul>
-//                 {shops.map((shop => (
-//                     <li>{shop}</li>
-//                 )))}
-//             </ul>
-//           </div>
-//     );
-// }
