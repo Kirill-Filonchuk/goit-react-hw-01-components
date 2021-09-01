@@ -3,6 +3,7 @@ import s from '../Social-profile/SocialProfile.module.css';
 import DefImg from '../Social-profile/5345363.png';
 
 function Profile({ name, tag, location, avatar, stats }) {
+  // const { 'followers', 'views', 'likes'} = stats;
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -39,7 +40,11 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stars: PropTypes.object,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
 
 export default Profile;
