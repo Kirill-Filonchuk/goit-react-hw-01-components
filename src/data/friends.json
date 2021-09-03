@@ -1,0 +1,32 @@
+[
+  {
+    "avatar": "https://img.icons8.com/office/160/000000/ninja-turtle.png",
+    "name": "Mango",
+    "isOnline": true,
+    "id": 1812
+  },
+  {
+    "avatar": "https://img.icons8.com/office/160/000000/doctor-fate-helmet.png",
+    "name": "Kiwi",
+    "isOnline": false,
+    "id": 1137
+  },
+  {
+    "avatar": "https://img.icons8.com/office/160/000000/super-mario.png",
+    "name": "Ajax",
+    "isOnline": true,
+    "id": 1213
+  },
+  {
+    "avatar": "https://img.icons8.com/office/160/000000/thor.png",
+    "name": "Jay",
+    "isOnline": true,
+    "id": 1714
+  },
+  {
+    "avatar": "https://img.icons8.com/office/160/000000/harry-potter-.png",
+    "name": "Poly",
+    "isOnline": false,
+    "id": 1284
+  }
+]

@@ -3,17 +3,17 @@ import './App.css';
 
 // Task 1
 import Profile from '../Social-profile/Profile';
-import user from '../data/user.json';
+import user from '../../data/user.json';
 // Task 2
-import statisticalData from '../data/statistical-data.json';
+import statisticalData from '../../data/statistical-data.json';
 import Statistics from '../Statistics/Statistics';
 // Task 3
-import friends from '../data/friends.json';
+import friends from '../../data/friends.json';
 import FriendList from '../FriendList/FriendList';
 
 // Task 4
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
-import transactions from '../data/transactions.json';
+import transactions from '../../data/transactions.json';
 
 function App() {
   return (
@@ -45,3 +45,5 @@ function App() {
 }
 
 export default App;
+
+// https://icons8.com
